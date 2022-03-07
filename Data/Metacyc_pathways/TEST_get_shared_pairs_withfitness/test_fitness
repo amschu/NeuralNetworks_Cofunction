@@ -1,0 +1,16 @@
+Query_allele_name,Array_allele_name,Query_single_mutant_fitness_(SMF),Array_SMF,Double_mutant_fitness
+gene1,gene2,0.8285,0.9254,0.7319
+gene1,gene3,0.8285,0.9408,0.4266
+gene1,gene3,0.8285,0.9408,0.752
+gene2,gene4,0.9254,0.7988,0.6661
+gene2,gene4,0.9254,0.7988,0.6661
+gene19,gene1,0.6285,0.8285,0.6661
+gene19,gene10,0.6285,0.9003,0.8322
+gene10,gene11,0.9003,0.669,0.4249
+gene22,gene1,0.8285,0.8285,0.4249
+gene1,gene22,0.8285,0.689,0.4289
+gene19,gene1,0.6285,0.8285,0.6661
+gene6,gene7,0.6277,0.8288,0.6681
+gene7,gene6,0.8288,0.6277,0.6681
+gene17,gene18,0.1111,0.2222,0.3333
+gene1,gene10,0.8285,0.9003, 0.3433
