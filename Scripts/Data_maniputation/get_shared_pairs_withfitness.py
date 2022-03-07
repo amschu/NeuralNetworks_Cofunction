@@ -39,8 +39,9 @@ from tqdm import tqdm
 #               -S288c_metacyc.txt"
 #
 # #FITNESS
-# #file3 = r"/mnt/ufs18/home-056/schum193/project/cofunction/" +\
-#          "Pathways_cofunction/raw_filtered_genepairs_SMF_DMF.csv"
+# #file3 = "/mnt/gs18/scratch/users/schum193/" +\
+#          "pathways_matrix_generationfiles/" +\
+#          "genepairs_SMF_DMF.csv"
 
 ##############################################
 ######### READ IN FILES WITH ARGPARSE ########
