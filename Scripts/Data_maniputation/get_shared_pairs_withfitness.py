@@ -10,6 +10,10 @@ python review_get_shared_pairs/get_shared_pairs_in_fitness_REVIEW.py
 -p ./Pathways-of-gene-All--in-Saccharomyces-cerevisiae-S288c_metacyc.txt
 -g ./All-instances-of-Genes-in-Saccharomyces-cerevisiae-S288c_metacyc.txt
 -f ./raw_filtered_genepairs_SMF_DMF.csv
+
+OUTPUT FILE LOCATION (HPCC): "/mnt/gs18/scratch/users/schum193/" +\
+                             "pathways_matrix_generationfiles/" +\
+                             "all_pathways_with_fitness_metacyc.csv"
 """
 
 import argparse
@@ -42,6 +46,7 @@ from tqdm import tqdm
 # #file3 = "/mnt/gs18/scratch/users/schum193/" +\
 #          "pathways_matrix_generationfiles/" +\
 #          "genepairs_SMF_DMF.csv"
+
 
 ##############################################
 ######### READ IN FILES WITH ARGPARSE ########
