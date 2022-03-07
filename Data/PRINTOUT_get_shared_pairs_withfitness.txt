@@ -1,0 +1,81 @@
+Path-gene shape: (339, 2)
+Gene-path shape:
+ (973, 2)
+Fitness shape df3:
+ (17520730, 5)
+     add cols:
+ (17520730, 7)
+df3 snapshot with added cols:
+   Query_allele_name Array_allele_name  Query_single_mutant_fitness_(SMF)  Array_SMF  Double_mutant_fitness  GenePairs GenePairs_Reversed
+0              tfc3              mcm2                             0.8285     0.9254                 0.7319  TFC3_MCM2          MCM2_TFC3
+1              tfc3              lsm2                             0.8285     0.9408                 0.4266  TFC3_LSM2          LSM2_TFC3
+2              tfc3              stu1                             0.8285     0.8925                 0.7520  TFC3_STU1          STU1_TFC3
+3              tfc3              stu1                             0.8285     0.7988                 0.6661  TFC3_STU1          STU1_TFC3
+4              tfc3              stu1                             0.8285     0.7683                 0.4764  TFC3_STU1          STU1_TFC3
+No. of genes:
+ 973
+No. of all possible gene combos:
+ 472878
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 472878/472878 [05:47<00:00, 1361.22it/s]
++:
+ 10074
+-:
+ 462804
+df_pos snapshot:
+   Gene1  Gene2  Label
+0  AAH1   APT1      1
+1  AAH1   APT2      1
+2  AAH1   HPT1      1
+3  AAH1   PNP1      1
+4  AAH1  PRM15      1
+df_neg snapshot:
+   Gene1 Gene2  Label
+0  AAH1  AAT1      0
+1  AAH1  AAT2      0
+2  AAH1  ABD1      0
+3  AAH1  ABZ1      0
+4  AAH1  ABZ2      0
+df_pos.shape:
+ (10074, 3)
+df_neg.shape:
+ (462804, 3)
+df_neg_pos.shape:
+ (472878, 3)
+Col added df_neg_pos.shape: (472878, 5)
+Col added df_neg_pos for combined genepair and reverse format:
+   Gene1 Gene2  Label  GenePairs GenePairs_Reversed
+0  AAH1  AAT1      0  AAH1_AAT1          AAT1_AAH1
+1  AAH1  AAT2      0  AAH1_AAT2          AAT2_AAH1
+2  AAH1  ABD1      0  AAH1_ABD1          ABD1_AAH1
+3  AAH1  ABZ1      0  AAH1_ABZ1          ABZ1_AAH1
+4  AAH1  ABZ2      0  AAH1_ABZ2          ABZ2_AAH1
+merged_neg_pos_fitness.shape:
+ (193193, 10)
+merged_neg_pos_fitness
+   Query_allele_name Array_allele_name  Query_single_mutant_fitness_(SMF)  Array_SMF  Double_mutant_fitness    GenePairs GenePairs_Reversed  Gene1  Gene2  Label
+0             cdc19              ils1                             0.9005     0.9298                 0.9489   CDC19_ILS1         ILS1_CDC19  CDC19   ILS1      0
+1             cdc19             cdc27                             0.9005     0.9257                 0.8407  CDC19_CDC27        CDC27_CDC19  CDC19  CDC27      0
+2             cdc19             cdc27                             0.9005     0.8247                 0.8009  CDC19_CDC27        CDC27_CDC19  CDC19  CDC27      0
+3             cdc19              cds1                             0.9005     0.9626                 0.8097   CDC19_CDS1         CDS1_CDC19  CDC19   CDS1      0
+4             cdc19              tsc3                             0.9005     0.7834                 0.7455   CDC19_TSC3         TSC3_CDC19  CDC19   TSC3      0
+Filtered merged_neg_pos_fitness.shape:
+ (193193, 5)
+     GenePairs  Label  Query_single_mutant_fitness_(SMF)  Array_SMF  Double_mutant_fitness
+0   CDC19_ILS1      0                             0.9005     0.9298                 0.9489
+1  CDC19_CDC27      0                             0.9005     0.9257                 0.8407
+
+2  CDC19_CDC27      0                             0.9005     0.8247                 0.8009
+
+3   CDC19_CDS1      0                             0.9005     0.9626                 0.8097
+
+4   CDC19_TSC3      0                             0.9005     0.7834                 0.7455
+
+after averageing duplicate gene pairs with different fitness replicates
+ (174346, 4)
+           Label  Query_single_mutant_fitness_(SMF)  Array_SMF  Double_mutant_fitness
+GenePairs
+AAT1_ABD1    0.0                             0.9752     0.9315                 0.9117
+AAT1_ABZ1    0.0                             0.9752     1.0342                 0.9955
+AAT1_ABZ2    0.0                             0.9752     0.9960                 0.9800
+AAT1_ACS1    0.0                             0.9752     0.9985                 1.0216
+AAT1_ADE1    0.0                             0.9752     1.0050                 1.0349
