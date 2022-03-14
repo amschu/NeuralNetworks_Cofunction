@@ -129,7 +129,49 @@ model.add(keras.layers.Dense(300, activation="relu"))
 model.add(keras.layers.Dense(100, activation="relu"))
 model.add(keras.layers.Dense(10, activation="softmax"))
 
-import pydot
+### NOT WORKING BELOW DUE TO ERROR WITH IMPORTING PACKAGES?
+# import pydot
+# import graphviz
+# model.summary()
+# tf.keras.utils.plot_model(model, to_file="./images/ann/seq_model.png",
+#                           show_shapes=True)
 
-model.summary()
-keras.utils.plot_model(model)
+print("the model layers are:", '\n', model.layers)
+
+### find layer name if you are unsure
+hidden1 = model.layers[1]
+print("What is the name of the first hidden layer?", '\n', hidden1.name)
+
+# paramaters can be accessed using get_weights() and set_weights()
+
+weights, biases = hidden1.get_weights()
+print("weights", '\n', weights)
+print("weights shape", '\n', weights.shape)
+
+print("biases", '\n', biases)
+print("biases shape", '\n', biases.shape)
+
+###########################
+### COMPILING THE MODEL ###
+###########################
+
+model.compile(loss="sparse_categorical_crossentropy", optimizer="sgd",
+              metrics=["accuracy"])
+
+#########################################
+### TRAINING AND EVALUATING THE MODEL ###
+#########################################
+
+history = model.fit(X_train, y_train, epochs=10,
+                    validation_data=(X_valid, y_valid))
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pd.DataFrame(history.history).plot(figsize=(8, 5))
+plt.grid(True)
+plt.gca().set_ylim(0, 1) # set the vertical range to [0-1] plt.show()
+save_fig("Learning_Curves")
+plt.show()
+
+model.evaluate(X_test, y_test)
